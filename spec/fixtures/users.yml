@@ -1,0 +1,6 @@
+admin:
+  role: 'admin'
+  name: 'Admin'
+  email: 'admin@admin.com'
+  api_token: '84ad9eb7-e030-43f8-9df4-2947eccec227'
+  encrypted_password: '$2a$12$51FhAA.QK6ONzOynqacBQ.HTaKWXm2hRppSaLrqjFsnZsC5GcbE3O'

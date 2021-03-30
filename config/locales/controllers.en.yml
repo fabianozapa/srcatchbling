@@ -1,0 +1,13 @@
+pt-BR:
+  controllers:
+    devise/passwords:
+      new:
+        title: 'Recover Password'
+        submit: 'Send recover email'
+    devise/sesstions:
+      new:
+        title: 'Login'
+    devise/registrations:
+      new:
+        title: 'Sign Up'
+        characters_at_least: 'At least %{characters} caracteres'

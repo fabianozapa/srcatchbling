@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  host: db
+  encoding: unicode
+  username: postgres
+  password: postgres
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: srcatchbling_development
+
+test:
+  <<: *default
+  database: srcatchbling_test
+
+production:
+  <<: *default
+  database: srcatchbling_test_production

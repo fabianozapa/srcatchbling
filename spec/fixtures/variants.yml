@@ -1,0 +1,21 @@
+1:
+  id: 1
+  product_id: 1
+  name: 'The Itcher'
+  description: 'Scratch any itch'
+  currency: 'USD'
+  cents: 2700
+2:
+  id: 2
+  product_id: 1
+  name: 'The Blinger'
+  description: 'Diamonds'
+  currency: 'USD'
+  cents: 34300
+3:
+  id: 3
+  product_id: 1
+  name: 'Glitz and Gold'
+  description: 'Gold handle and fancy emeralds'
+  currency: 'USD'
+  cents: 434300

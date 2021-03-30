@@ -1,0 +1,20 @@
+1:
+  id: 1
+  option_type_id: 1
+  name: 'XS'
+2:
+  id: 2
+  option_type_id: 1
+  name: 'S'
+3:
+  id: 3
+  option_type_id: 1
+  name: 'M'
+4:
+  id: 4
+  option_type_id: 1
+  name: 'L'
+5:
+  id: 5
+  option_type_id: 1
+  name: 'XL'

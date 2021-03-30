@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    models:
+      role:
+        one: 'Permission'
+        other: 'Permissions'
+      user:
+        one: 'User'
+        other: 'Users'
