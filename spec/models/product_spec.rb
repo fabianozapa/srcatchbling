@@ -33,7 +33,7 @@ RSpec.describe Product, type: :model do
       expect(product.slug).to eq 'product'
 
       expect(product.option_types.map(&:name)).to eq %w[option_type]
-      expect(product.option_values.map(&:name)).to eq %w[1 2 3]
+      expect(product.option_values.map(&:name)).to eq %w[3 2 1]
     end
   end
 end

@@ -15,19 +15,19 @@ RSpec.describe Api::V1::VariantsController, type: :controller do
           'name' => 'The Itcher',
           'description' => 'Scratch any itch',
           'price' => '$27.00',
-          'sizes' => %w[XL]
+          'sizes' => match_array(%w[XL])
         },
         {
           'name' => 'The Blinger',
           'description' => 'Diamonds',
           'price' => '$343.00',
-          'sizes' => %w[L]
+          'sizes' => match_array(%w[L])
         },
         {
           'name' => 'Glitz and Gold',
           'description' => 'Gold handle and fancy emeralds',
           'price' => '$4343.00',
-          'sizes' => %w[S M L XL]
+          'sizes' => match_array(%w[S M L XL])
         }
       ])
     end
@@ -47,7 +47,7 @@ RSpec.describe Api::V1::VariantsController, type: :controller do
         'name' => 'The Itcher Up',
         'description' => 'Scratch any itch Up',
         'price' => '$50.00',
-        'sizes' => %w[S M]
+        'sizes' => match_array(%w[S M])
       )
     end
   end
@@ -66,7 +66,7 @@ RSpec.describe Api::V1::VariantsController, type: :controller do
         'name' => 'The Itcher',
         'description' => 'Scratch any itch Up',
         'price' => '$30.00',
-        'sizes' => %w[S L]
+        'sizes' => match_array(%w[S L])
       )
     end
   end
