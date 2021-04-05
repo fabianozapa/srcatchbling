@@ -9,21 +9,26 @@ RSpec.describe Api::V1::VariantsController, type: :controller do
 
   describe '#index' do
     it 'lists variant with option_value_variants' do
+      variant_ids = Variant.all.map(&:id)
+      pp variant_ids
       get :index, params: { product_slug: :backscratchers }, :format => :json
       expect(JSON.parse(response.body)).to match_array([
         {
+          'id' => be_in(variant_ids),
           'name' => 'The Itcher',
           'description' => 'Scratch any itch',
           'price' => '$27.00',
           'sizes' => match_array(%w[XL])
         },
         {
+          'id' => be_in(variant_ids),
           'name' => 'The Blinger',
           'description' => 'Diamonds',
           'price' => '$343.00',
           'sizes' => match_array(%w[L])
         },
         {
+          'id' => be_in(variant_ids),
           'name' => 'Glitz and Gold',
           'description' => 'Gold handle and fancy emeralds',
           'price' => '$4343.00',
@@ -44,6 +49,7 @@ RSpec.describe Api::V1::VariantsController, type: :controller do
     it 'creates variant and option_value_variants' do
       post :create, params: { product_slug: :backscratchers }.merge(params), :format => :json
       expect(JSON.parse(response.body)).to match(
+        'id' => instance_of(Integer),
         'name' => 'The Itcher Up',
         'description' => 'Scratch any itch Up',
         'price' => '$50.00',
@@ -63,6 +69,7 @@ RSpec.describe Api::V1::VariantsController, type: :controller do
     it 'updates variant and option_value_variants' do
       put :update, params: { product_slug: :backscratchers, id: variants.first.id }.merge(params), :format => :json
       expect(JSON.parse(response.body)).to match(
+        'id' => instance_of(Integer),
         'name' => 'The Itcher',
         'description' => 'Scratch any itch Up',
         'price' => '$30.00',

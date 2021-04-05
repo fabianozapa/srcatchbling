@@ -12,7 +12,7 @@ module Api
       end
 
       def as_json
-        json = variant.as_json(only: [:name, :description, :price], methods: [:price])
+        json = variant.as_json(only: [:id, :name, :description, :price], methods: [:price])
 
         variant.option_values.each do |value|
           value_name = value.name
