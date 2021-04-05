@@ -10,7 +10,6 @@ RSpec.describe Api::V1::VariantsController, type: :controller do
   describe '#index' do
     it 'lists variant with option_value_variants' do
       variant_ids = Variant.all.map(&:id)
-      pp variant_ids
       get :index, params: { product_slug: :backscratchers }, :format => :json
       expect(JSON.parse(response.body)).to match_array([
         {
