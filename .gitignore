@@ -31,3 +31,5 @@
 /public/assets
 /config/secrets.yml
 /config/database.yml
+/coverage/.last_run.json
+/coverage/*
