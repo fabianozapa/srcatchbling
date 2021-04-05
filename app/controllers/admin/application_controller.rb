@@ -12,6 +12,6 @@ module Admin
     def set_globals
       @current_user = current_user
     end
-    
+
   end
 end
