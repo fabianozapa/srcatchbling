@@ -12,7 +12,7 @@ module Api
     private
 
       def token
-        headers['token'] || headers['Token']
+        request.headers['token'] || request.headers['Token']
       end
 
       def auth_user
