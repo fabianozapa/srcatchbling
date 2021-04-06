@@ -1,4 +1,4 @@
-pt-BR:
+en:
   controllers:
     devise/passwords:
       new:

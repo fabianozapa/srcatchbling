@@ -30,4 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  menu:
+    users: 'Users'
+    login: 'Login'
+    register: 'Register'
+    products: 'Products'
+    variants: 'Variants'
+    account: 'Account'
+    logout: 'Logout'

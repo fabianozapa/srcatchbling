@@ -1,4 +1,4 @@
-pt-BR:
+en:
   activerecord:
     models:
       role:
@@ -7,3 +7,9 @@ pt-BR:
       user:
         one: 'User'
         other: 'Users'
+      product:
+        one: 'Product'
+        other: 'Products'
+      variant:
+        one: 'Variant'
+        other: 'Variants'
