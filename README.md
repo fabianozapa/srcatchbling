@@ -35,6 +35,12 @@ Extra Credit:
 rspec -f d
 ```
 
+# Test User:
+```
+email: admin@admin.com
+password: sekhmet123456
+```
+
 # CURL TESTS:
 INDEX:
 ```
@@ -57,7 +63,7 @@ curl --location --request POST 'http://srcatchbling-1174557878.us-east-1.elb.ama
 
 UPDATE:
 ```
-curl --location --request PUT 'http://srcatchbling-1174557878.us-east-1.elb.amazonaws.com/api/v1/backscratchers/4' \
+curl --location --request PUT 'http://srcatchbling-1174557878.us-east-1.elb.amazonaws.com/api/v1/backscratchers/6' \
 --header 'token: 01e014cb-1fb3-4189-93a3-b163e11f92d4' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -70,9 +76,9 @@ curl --location --request PUT 'http://srcatchbling-1174557878.us-east-1.elb.amaz
 
 DELETE:
 ```
-curl --location --request DELETE 'http://srcatchbling-1174557878.us-east-1.elb.amazonaws.com/api/v1/backscratchers/4' \
+curl --location --request DELETE 'http://srcatchbling-1174557878.us-east-1.elb.amazonaws.com/api/v1/backscratchers/6' \
 --header 'token: 01e014cb-1fb3-4189-93a3-b163e11f92d4'
 ```
 
 # POSTMAN TESTS:
-http://srcatchbling-1174557878.us-east-1.elb.amazonaws.com/tests/srcatchbling.postman_collection.json
+https://raw.githubusercontent.com/fabianozapa/srcatchbling/master/public/tests/srcatchbling.postman_collection.json
