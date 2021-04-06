@@ -3,7 +3,9 @@ module Admin
     load_and_authorize_resource
 
     def index
-      @users = @users.page(page).per(per_page)
+      @q = User.accessible_by(current_ability, :index).ransack(params[:q])
+      @users = @q.result(distinct: true).page(page).per(per_page)
+
       respond_to do |format|
         format.html { render :index }
         format.json { render json: {users: @users.as_json} }

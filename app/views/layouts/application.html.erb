@@ -25,8 +25,8 @@
           <li><%= link_to t('menu.login'), new_user_session_path %></li>
           <li><%= link_to t('menu.register'), new_user_registration_path %></li>
         <% else %>
-          <li><%= link_to t('menu.worked_times'), admin_worked_times_path %></li>
-          <li><%= link_to t('menu.calendar'), admin_calendar_path %></li>
+          <li><%= link_to t('menu.variants'), admin_variants_path %></li>
+          <li><%= link_to t('menu.products'), admin_products_path %></li>
           <% if @current_user.admin? %>
             <li><%= link_to t('menu.users'), admin_users_path %></li>
           <% end %>

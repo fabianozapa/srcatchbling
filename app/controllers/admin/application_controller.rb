@@ -1,9 +1,19 @@
 module Admin
   class ApplicationController < ::ApplicationController
-
-
     before_action :authenticate_user!
     prepend_before_action :set_globals
+
+    def after_sign_in_path_for(user)
+      admin_variants_path
+    end
+
+    def after_sign_out_path_for(user)
+      new_user_session_path
+    end
+
+    def after_sign_up_path_for(user)
+      new_user_session_path
+    end
 
     def current_ability
       @current_ability ||= Ability.new(current_user)
@@ -12,6 +22,5 @@ module Admin
     def set_globals
       @current_user = current_user
     end
-
   end
 end
